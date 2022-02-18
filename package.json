@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@jsinkler713/five-letter-word": "^1.0.4",
+    "@jsinkler713/five-letter-word": "^1.1.0",
+    "body-parser": "^1.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.2"
   }
