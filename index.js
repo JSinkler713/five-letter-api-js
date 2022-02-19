@@ -1,10 +1,10 @@
 const express = require('express')
 const fiveLetterPackage = require('@jsinkler713/five-letter-word')
-const  cors = require('cors')
+const cors = require('cors')
 var bodyParser = require('body-parser')
 
-
 const app = express()
+const PORT = process.env.PORT || 4000
 app.use(cors()) // allow all
 app.use(bodyParser.json())
 
@@ -13,10 +13,7 @@ app.get('/five-letter', (req, res) => {
 })
 
 app.post('/check-is-word', (req, res) => {
-  console.log(req.body)
   res.json(fiveLetterPackage.checkForWord(req.body.word))
 })
 
-app.listen(4000, ()=> {
-  console.log('listening on port 4000')
-});
+app.listen(PORT, ()=> console.log(`listening on port ${PORT}`);
